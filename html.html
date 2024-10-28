@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('background4.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="radio"], input[type="checkbox"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+            outline: none;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #444;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .container:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Extra styling for radio buttons */
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            color: #333;
+        }
+
+        .radio-group input[type="radio"]:hover {
+            cursor: pointer;
+        }
+
+        /* Checkbox styling */
+        label input[type="checkbox"] {
+            transform: scale(1.2);
+        }
+
+        /* Hover effect for container */
+        .container:hover {
+            transform: scale(1.02);
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            input[type="submit"] {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Registration</h1>
+    
+    <form>
+        <label for="name">First Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+        
+        <label for="familyname">Last Name</label>
+        <input type="text" id="familyname" name="familyname" placeholder="Enter your last name" required>
+
+        <label for="sexe">Gender</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="sexe" value="h" required> Male
+            </label>
+            <label>
+                <input type="radio" name="sexe" value="f" required> Female
+            </label>
+        </div>
+
+        <label>
+            <input type="checkbox" name="agreement" required> I agree to the terms
+        </label>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="section-title">
+        Introduce Yourself & Talk About Your Hobbies
+    </div>
+
+    <form>
+        <input type="text" placeholder="Introduce yourself" required>
+    </form>
+</div>
+
+</body>
+</html>
+
+
